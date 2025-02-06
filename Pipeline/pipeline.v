@@ -2,7 +2,7 @@ module pipeline #(parameter WIDTH = 32, DEPTH = 1) (
     input wire clk,
     input wire rst,
     input wire [WIDTH-1:0] d,
-    output reg [WIDTH-1:0] q
+    output wire [WIDTH-1:0] q
 );
 
 wire [WIDTH-1:0] flop [DEPTH:0];
@@ -38,3 +38,5 @@ module dff #(parameter WIDTH = 8) (
             q <= d;
         end
     end
+
+endmodule
